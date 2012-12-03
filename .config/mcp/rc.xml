@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mcp>
+    <sources>
+        <!--<dir>~/torrents/download</dir>-->
+        <!--<dir>/mnt/wind/downloads/torrent</dir>-->
+    </sources>
+    <serials>
+        <!--<s mask="fringe?s05*.???" ddir="~/video/serials/fringe/s05" exec="mpl -ag fringe_s05"/>
+        <s mask="game?of?thrones*.???" ddir="~/video/serials/got" exec="mpl -ag got" />
+        <s mask="how?i?met?your?mother?s08*.???" ddir="~/video/serials/himym/s08" exec="mpl -ag himym_s08" />
+        <s mask="the?big?bang?theory?s06*.???" ddir="~/video/serials/big_bang/s06" exec="mpl -ag bigbang_s06" />
+        <s mask="supernatural?s08*.???" ddir="~/video/serials/supernatural/s08" exec="mpl -ag supernatural_s08"/>
+        <s mask="the?vampire?diaries*s04*.???" ddir="~/video/serials/vampire_diaries/s04" lower="yes" exec="mpl -ag vd_s04" />
+        <s mask="arrow*.???" ddir="~/video/serials/arrow" lower="yes" exec="mpl -ag arrow" />
+        <s mask="??.nisemonogatari.???" ddir="~/video/anime/nisemonogatari" lower="yes" exec="mpl -ag nisemonogatari" />
+        <s mask="misfits.s04e*.???" ddir="~/video/serials/misfits/s04" lower="yes" exec="mpl -ag misfits_s04" />-->
+    </serials>
+</mcp>

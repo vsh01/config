@@ -1,0 +1,68 @@
+Xcursor.theme: Vanilla-DMZ
+!yeahconsole
+yeahconsole*term:                  xterm
+yeahconsole*screenWidth:           Display width
+yeahconsole*consoleHeight:         40
+yeahconsole*toggleKey:             ControlAlt+y
+yeahconsole*keySmaller:            Control+KP_Subtract
+yeahconsole*keyBigger:             Control+KP_Add
+yeahconsole*keyFull:               Alt+F11
+
+
+
+URxvt.perl-ext: default,tabbed
+!URxvt.font: xft:terminus:size=12
+URxvt.font: xft:Terminus:pixelsize=20:autohint=true:antialias=true
+URxvt.boldFont: xft:Terminus:bold:pixelsize=20:autohint=true:antialias=true
+!URxvt.font: -misc-fixed
+URxvt*geometry: 139x47+0+0
+URxvt*reverseVideo: false
+URxvt*jumpScroll: true
+URxvt*scrollBar: false
+URxvt*insecure: false
+URxvt*cursorBlink: false
+URxvt*pointerBlank: false
+URxvt*saveLines: 32000
+URxvt*internalBorder: false
+URxvt*borderLess: false
+URxvt*thickness: 1
+URxvt*scrollstyle: plain
+URxvt*pastableTabs: true
+
+! ! Colors
+!URxvt*foreground:           #bbbb00
+!URxvt*background:           #000055
+URxvt*background:           #111111
+URxvt*foreground:           #cccccc
+
+! ! Black
+!URxvt*color0:               #333333
+!URxvt*color8:               #5E5E5E
+
+! ! Red
+!URxvt*color1:               #C35365
+!URxvt*color9:               #D7786C
+
+! ! Green
+!URxvt*color2:               #8D983F
+!URxvt*color10:              #A7D671
+
+! ! Yellow
+!URxvt*color3:               #E1DB70
+!URxvt*color11:              #F5F19A
+
+! ! Blue
+!URxvt*color4:               #3D77A1
+!URxvt*color12:              #72AFCC
+
+! ! Magenta
+!URxvt*color5:               #CC74AC
+!URxvt*color13:              #EDAED6
+
+! ! Cyan
+!URxvt*color6:               #6B9D98
+!URxvt*color14:              #ACCDCA
+
+! ! White
+!URxvt*color7:               #dbdbdb
+!URxvt*color15:              #fbfbfb

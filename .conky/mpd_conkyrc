@@ -1,0 +1,75 @@
+background no
+border_width 1
+
+cpu_avg_samples 2
+
+default_color white
+default_outline_color white
+default_shade_color white
+
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+
+double_buffer yes
+
+use_xft yes
+xftfont Terminus:size=12
+
+minimum_size 5 5
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+
+own_window yes
+#own_window no
+#own_window_class Conky
+own_window_type desktop
+#own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager 
+own_window_argb_visual yes
+own_window_argb_value 190
+own_window_transparent no
+own_window_colour 000900
+
+stippled_borders 0
+uppercase no
+use_spacer yes
+show_graph_scale no
+show_graph_range no
+
+#default text
+default_color white
+#title
+color1 red
+#text
+color2 white
+#second text
+color3 grey
+
+#graph gradient colors
+color4 black
+color5 888888
+
+#MPD color
+color6 149914
+
+#END BASE CONFIG
+
+alignment top_right
+gap_x 450
+gap_y 15
+update_interval 1.0
+
+TEXT
+${color1}MPD$color
+$color6$mpd_status$color
+$mpd_smart
+${color6}${mpd_bar 2}$color
+$mpd_elapsed/$mpd_length ($mpd_percent%)
+${color6}Volume:$color $mpd_vol% \
+${color6}Random:$color $mpd_random \
+${color6}Repeat:$color $mpd_repeat
