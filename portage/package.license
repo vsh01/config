@@ -1,0 +1,21 @@
+#required by oracle-jdk-bin (argument)
+>=dev-java/oracle-jdk-bin-1.7.0.2 Oracle-BCLA-JavaSE
+dev-java/jta sun-bcla-jta
+#required by skype (argument)
+>=net-im/skype-2.2.0.35-r1 skype-eula
+www-plugins/adobe-flash AdobeFlash-10.3
+
+
+
+#required by google-chrome (argument)
+>=www-client/google-chrome-18.0.1025.142_p129054:stable google-chrome
+#required by =adobe-flash-11.0.1.152 (argument)
+www-plugins/adobe-flash AdobeFlash-11_beta
+#required by virtualbox-bin (argument)
+>=app-emulation/virtualbox-bin-4.1.12 PUEL
+#required by app-emulation/virtualbox-4.1.12[additions], required by app-emulation/virtualbox-extpack-oracle-4.1.12, required by virtualbox-extpack-oracle (argument)
+>=app-emulation/virtualbox-additions-4.1.12 PUEL
+#required by virtualbox-extpack-oracle (argument)
+>=app-emulation/virtualbox-extpack-oracle-4.1.12 PUEL
+
+net-im/skype skype-4.0.0.7-copyright

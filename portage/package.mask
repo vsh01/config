@@ -1,0 +1,2 @@
+<=dev-util/netbeans-7.0-r1
+=www-plugins/adobe-flash-11.2.202.228

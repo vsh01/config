@@ -1,0 +1,22 @@
+media-video/vlc fontconfig httpd libass stream theora lua
+app-admin/conky mpd nvidia
+app-emulation/virtualbox extensions vnc
+dev-python/PyQt4 webkit
+www-plugins/adobe-flash 64bit
+dev-lang/python sqlite
+x11-terms/rxvt-unicode 256-color
+media-gfx/comix rar
+x11-misc/tint2 examples
+dev-java/icedtea-bin examples source
+app-arch/p7zip rar
+#required by dev-java/netbeans-platform-7.1, required by dev-java/netbeans-ide-7.1, required by dev-java/netbeans-apisupport-7.1, required by dev-util/netbeans-7.1-r1, required by @selected, required by @world (argument)
+>=dev-java/swing-layout-1.0.4 source
+#required by sys-fs/cryptsetup-1.4.1[static], required by sys-apps/pmount-0.9.99_alpha-r1[crypt], required by @selected, required by @world (argument)
+=sys-apps/util-linux-2.20.1-r1 static-libs
+sys-apps/pmount -crypt
+x11-terms/rxvt-unicode xft
+#required by media-video/vlc-1.1.13[-id3tag,-sdl-image,-taglib,sdl,png,-directfb], required by @selected, required by @world (argument)
+sys-libs/zlib minizip
+media-libs/mesa g3dvl
+sys-fs/ntfs3g ntfsprogs
+dev-util/qt-creator cmake git fakevim
