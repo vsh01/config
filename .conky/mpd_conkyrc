@@ -16,6 +16,7 @@ double_buffer yes
 
 use_xft yes
 xftfont Terminus:size=12
+#override_utf8_locale no
 
 minimum_size 5 5
 net_avg_samples 2
@@ -67,7 +68,7 @@ update_interval 1.0
 TEXT
 ${color1}MPD$color
 $color6$mpd_status$color
-$mpd_smart
+${scroll 45 1 $mpd_smart}
 ${color6}${mpd_bar 2}$color
 $mpd_elapsed/$mpd_length ($mpd_percent%)
 ${color6}Volume:$color $mpd_vol% \
