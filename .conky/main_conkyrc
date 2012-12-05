@@ -59,7 +59,7 @@ color6 149914
 
 #END BASE CONFIG
 
-alignment top_right
+alignment bottom_right
 gap_x 15
 gap_y 15
 update_interval 2.0
@@ -78,10 +78,10 @@ ${color6}CPU0 Usage:$color ${cpu cpu0}%$alignr${cpubar cpu0 4,270}
 ${color6}CPU1 Usage:$color ${cpu cpu1}%$alignr${cpubar cpu1 4,270}
 ${color6}CPU2 Usage:$color ${cpu cpu2}%$alignr${cpubar cpu2 4,270}
 ${color6}CPU3 Usage:$color ${cpu cpu3}%$alignr${cpubar cpu3 4,270}
-${color2}${cpugraph 30,94 cpu0 color4 color5} \
-${color2}${cpugraph 30,94 cpu1 color4 color5} \
-${color2}${cpugraph 30,94 cpu2 color4 color5} \
-${color2}${cpugraph 30,94 cpu3 color4 color5}
+${color2}${cpugraph cpu0 30,94 color4 color5} \
+${color2}${cpugraph cpu1 30,94 color4 color5} \
+${color2}${cpugraph cpu2 30,94 color4 color5} \
+${color2}${cpugraph cpu3 30,94 color4 color5}
 $color$hr
 ${color1}File systems:
 $color6/$color $alignc ${fs_used /} / ${fs_size /}
