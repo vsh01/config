@@ -8,7 +8,7 @@ set nowrap
 
 "{{{ Appearance
 set t_Co=256
-colo desert256
+colo Laravel
 set background=dark
 "if has("gui_running")
     "if has("gui_gtk2")
