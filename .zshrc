@@ -81,7 +81,7 @@ alias -g B='&|'
 hosts=(`hostname` localhost 127.0.0.1)
 
 # Set prompts
-PROMPT='[%n][%T]:%~%# '    # default prompt
+PROMPT='[%n@%m][%T]:%~%# '    # default prompt
 #PROMPTCHARS='$#'
 SPROMPT="Ошибка! Вы хотели ввести %r вместо %R? ([Y]es/[N]o/[E]dit/[A]bort) "
 #RPROMPT=' %~'     # prompt for right side of screen
