@@ -323,4 +323,6 @@ zstyle ':completion:*:functions' ignored-patterns '_*'
 eval `dircolors ~/.dircolors`
 zstyle ':completion:*:default' list-colors ${LS_COLORS} 
 
-source ~/.mpl_zshcpl
+if [ -f ~/.mpl_zshcpl ]; then
+    source ~/.mpl_zshcpl
+fi
