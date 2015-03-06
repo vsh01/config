@@ -20,14 +20,10 @@
 # SCREEN SETTINGS
 # ------------------------------------------------------------------------------
 
-#startup_message off
-#nethack on
-
 startup_message off
 autodetach on
 defflow off # will force screen to process ^S/^Q
 deflogin on
-#autodetach off
 
 altscreen on
 
@@ -67,41 +63,22 @@ bind o title
 bind f fit
 bind ^f fit
 
-#layouts
-#bind ^l layout next
-#bind l layout next
-#bind L layout new
-
-#bind F eval "caption splitonly" "hardstatus ignore"
-#bind f eval "caption always"    "hardstatus alwayslastline"
-
-# An example of a "screen scraper" which will launch urlview on the current
-# screen window
-#
-#bind ^B eval "hardcopy_append off" "hardcopy -h $HOME/.screen-urlview" "screen urlview $HOME/.screen-urlview"
+bind h focus left
+bind l focus right
+bind k focus up
+bind j focus down
 
 # ------------------------------------------------------------------------------
 # TERMINAL SETTINGS
 # ------------------------------------------------------------------------------
 
 defutf8 on
-# turn sending of screen messages to hardstatus off
-#hardstatus off
-# use this for the hard status string
-#hardstatus string "%h%? users: %u%?"
 
 backtick 1 3 3 scrst 1
 
-#caption always '%{kd}%n %t'
-#hardstatus on
-#hardstatus alwayslastline '%w %-=[CPU temp %1`] %d/%m %c%{-} '
-
 hardstatus alwayslastline
 hardstatus string "%{.bW}%-w%{.wB}%n %t%{-}%+w %=%{..G} %H %{..Y} %d/%m %c "
-#caption always "%3n %t%? @%u%?%? [%h]%?"
-#caption always "%?%F%{.gb}%:%{.yb}%?%3n %t%? [%h]%?"
 caption always "%?%F%{.rw}%:%?%3n %t%? [%h]%?"
-# set these terminals up to be 'optimal' instead of vt100
 termcapinfo xterm*|linux*|*rxvt*|rxvt-256color|Eterm* OP
 
 
@@ -122,36 +99,4 @@ termcapinfo xterm|xterms|xs|rxvt|rxvt-256color ti@:te@
 # Enable non-blocking mode to better cope with flaky ssh connections.
 defnonblock 5
 
-# ------------------------------------------------------------------------------
-# STARTUP SCREENS
-# ------------------------------------------------------------------------------
-
-# Example of automatically running some programs in windows on screen startup.
-#
-#   The following will open top in the first window, an ssh session to monkey
-#   in the next window, and then open mutt and tail in windows 8 and 9
-#   respectively.
-#
-# screen top
-# screen -t monkey ssh monkey
-# screen -t mail 8 mutt
-# screen -t daemon 9 tail -f /var/log/daemon.log
-
-
-#layout autosave on
-#layout new desktop
 screen
-#layout new hard
-
-#split
-#resize 25%
-#split -v
-#resize 16%
-#screen
-#exec temps
-#focus
-#screen htop
-#focus
-
-#screen
-#layout next
