@@ -9,29 +9,14 @@ alias la='ls -a'
 # List only file beginning with "."
 alias lsa='ls -ld .*'
 
-alias C='bc <<< '
-
-alias 2utf8='enconv -L ru -x UTF-8'
-alias s2u='2utf8 *.(srt|ssa|ass)'
-
-alias md5gen="md5sum * > md5sums"
-alias md5ch="md5sum -c md5sums"
-alias wget_dl="wget -ci dl"
-
-#alias df='df -h'
 alias df='di -h'
 alias du='du -h'
 
 alias mkpass="head -c4 /dev/urandom | xxd -ps"
 
-alias temps="while (( 1 )); do sensors | grep Core0 | cut -d' ' -f1,2,3,4; sleep 2; done"
 alias kill9="kill -9"
 
 alias trs='transmission-show'
-alias vir='vim !read'
-alias car='cat !read'
-
-alias clt='rm -rf ~/tmp/*'
 
 #apt aliases
 alias apts="apt-cache show"
@@ -42,9 +27,6 @@ alias aptu="sudo apt-get update"
 alias aptd="sudo apt-get dist-upgrade"
 alias aptg="sudo apt-get upgrade"
 alias aptr="sudo apt-get remove"
-#alias aptui="sudo apt-get -tunstable install"
-
-alias dirf='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 
 #directories
 alias p=pushd

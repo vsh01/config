@@ -47,9 +47,9 @@ if [ "$shell" = "bash" ]; then
                 let n=n+1
             fi
         done
-        COMPREPLY=(${ilist[*]}) #zsh only
+        COMPREPLY=(${ilist[*]}) 
     }
-    complete -F _ds_list ds #zsh only
+    complete -F _ds_list ds
 fi
 
 ds()
@@ -66,7 +66,7 @@ ds()
         config="$XDG_CONFIG_HOME"/dir_links #directories
     fi
     if ! [ -d "$config" ]; then
-        mkdir "$config"
+        mkdir -p "$config"
     fi
     
     if [ -z "$1" ]; then
@@ -118,9 +118,9 @@ ds()
         fi
 
         if [ -h "$link" ]; then
-            echo -n "Link already exists. You sure[Y/n] "
+            echo -n "Link already exists. Are you sure[y/N] "
             read ans
-            if [ "$ans" = "Y" ] || [ "$ans" = "y" ] || [ "$ans" = "" ]; then
+            if [ "$ans" = "Y" ] || [ "$ans" = "y" ]; then
                 rm -f "$link"
             else
                 return
