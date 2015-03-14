@@ -9,7 +9,11 @@ alias la='ls -a'
 # List only file beginning with "."
 alias lsa='ls -ld .*'
 
-alias df='di -h'
+if [ -z "$(which di)" ]; then
+    alias df='df -h'
+else
+    alias df='di -h'
+fi
 alias du='du -h'
 
 alias mkpass="head -c4 /dev/urandom | xxd -ps"
