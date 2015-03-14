@@ -21,13 +21,6 @@ alias lsd='ls -ld *(-/DN)'
 
 source $HOME/.she/init.sh
 
-# Shell functions
-setenv() { typeset -x "${1}${1:+=}${(@)argv[2,$#]}" }  # csh compatibility
-freload() { while (( $# )); do; unfunction $1; autoload -U $1; shift; done }
-
-# automatically remove duplicates from these arrays
-typeset -U path cdpath fpath manpath
-
 # Global aliases -- These do not have to be
 # at the beginning of the command line.
 alias -g M='|most'
@@ -38,14 +31,9 @@ alias -g Gi='|grep -i'
 alias -g BG='1,2>/dev/null &'
 alias -g B='&|'
 
-
-# Hosts to use for completion (see later zstyle)
-hosts=(`hostname` localhost 127.0.0.1)
-
 # Set prompts
 PROMPT='[%n@%m][%T]:%~%# '    # default prompt
 SPROMPT="Ошибка! Вы хотели ввести %r вместо %R? ([Y]es/[N]o/[E]dit/[A]bort) "
-
 
 MAILCHECK=300
 HISTSIZE=1000
@@ -163,9 +151,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # offer indexes before parameters in subscripts
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
-
-# command for process lists, the local web server details and host completion
-zstyle '*' hosts $hosts
 
 # Filename suffixes to ignore during completion (except after rm command)
 zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' \
