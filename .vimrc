@@ -8,7 +8,10 @@ set nowrap
 
 "{{{ Appearance
 set t_Co=256
-colo Laravel
+"colo Laravel
+"let g:solarized_termcolors=256
+syntax enable
+colorscheme solarized
 set background=dark
 "if has("gui_running")
     "if has("gui_gtk2")
