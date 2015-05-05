@@ -23,7 +23,6 @@ source $HOME/.she/init.sh
 
 # Global aliases -- These do not have to be
 # at the beginning of the command line.
-alias -g M='|most'
 alias -g H='|head'
 alias -g T='|tail'
 alias -g G='|grep'

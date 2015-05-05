@@ -18,7 +18,7 @@ if [ -d "$HOME/usr/bin" ] ; then
 fi
 
 PATH="/sbin:/usr/sbin:$PATH"
-export PAGER=most
+export PAGER=less
 export EDITOR=vim
 export VIEWER=view
 
