@@ -9,9 +9,13 @@ umask 022
 
 autoload zmv
 
+stty start '^-' stop '^-'
+
 alias mv='nocorrect mv'       # no spelling correction on mv
 alias cp='nocorrect cp'       # no spelling correction on cp
 alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
+
+
 alias zcp="zmv -C"
 alias zln="zmv -L"
 
@@ -23,16 +27,34 @@ source $HOME/.she/init.sh
 
 # Global aliases -- These do not have to be
 # at the beginning of the command line.
-alias -g H='|head'
-alias -g T='|tail'
-alias -g G='|grep'
-alias -g Gi='|grep -i'
-alias -g BG='1,2>/dev/null &'
-alias -g B='&|'
 
+
+autoload colors && colors
+setopt PROMPT_SUBST
+hgname() 
+{
+    hg root >/dev/null 2>/dev/null && echo "$(basename "$(hg root 2>/dev/null)")" && return
+    echo ""
+}
+hgbranch() 
+{
+    hg root >/dev/null 2>/dev/null && echo "$(basename "$(hg branch 2>/dev/null)")" && return
+    echo ""
+}
 # Set prompts
-PROMPT='[%n@%m][%T]:%~%# '    # default prompt
+PROMPT='%{$fg[green]%}[%D %T] user:[$reset_color%n%{$fg[green]%}] hg:[$reset_color$(hgname)%{$fg[green]%}] branch:[$reset_color$(hgbranch)%{$fg[green]%}] exit_code:[$reset_color%?%{$fg[green]%}] pwd:[$reset_color%/%{$fg[green]%}]%{$reset_color%}
+%# '    # default prompt
+#PROMPTCHARS='$#'
 SPROMPT="Ошибка! Вы хотели ввести %r вместо %R? ([Y]es/[N]o/[E]dit/[A]bort) "
+#RPROMPT=' %~'     # prompt for right side of screen
+
+precmd () {
+    echo -ne '\a'
+}
+
+# Some environment variables
+export HELPDIR=/usr/local/lib/zsh/help  # directory for run-help function to find docs
+
 
 MAILCHECK=300
 HISTSIZE=1000
@@ -60,6 +82,10 @@ zmodload -ap zsh/mapfile mapfile
 
 autoload .zkbd
 source ~/.zkbd/$TERM
+
+autoload edit-command-line
+zle -N edit-command-line
+bindkey -e '^X^e' edit-command-line
 
 #удаление n-ого параметра
 killparam()
@@ -153,7 +179,9 @@ zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 
 # Filename suffixes to ignore during completion (except after rm command)
 zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' \
-    '*?.old' '*?.pro'
+    '*?.old'
+# the same for old style completion
+#fignore=(.o .c~ .old .pro)
 
 # ignore completion functions (until the _ignored completer)
 zstyle ':completion:*:functions' ignored-patterns '_*'

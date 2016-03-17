@@ -2,6 +2,8 @@ alias j=jobs
 alias h=history
 alias grep=egrep
 
+alias tmux="TERM=screen-256color tmux"
+
 alias ls='ls --color=auto --group-directories-first'
 alias l='ls -l'
 alias lh='ls -lh'
@@ -9,11 +11,10 @@ alias la='ls -a'
 # List only file beginning with "."
 alias lsa='ls -ld .*'
 
-if [ -z "$(which di)" ]; then
-    alias df='df -h'
-else
-    alias df='di -h'
-fi
+alias cal='ncal -b'
+
+
+alias df='df -h'
 alias du='du -h'
 
 alias mkpass="head -c4 /dev/urandom | xxd -ps"
@@ -21,6 +22,7 @@ alias mkpass="head -c4 /dev/urandom | xxd -ps"
 alias kill9="kill -9"
 
 alias trs='transmission-show'
+
 
 #apt aliases
 alias apts="apt-cache show"

@@ -118,9 +118,9 @@ ds()
         fi
 
         if [ -h "$link" ]; then
-            echo -n "Link already exists. Are you sure[y/N] "
+            echo -n "Link already exists. Are you sure[Y/n] "
             read ans
-            if [ "$ans" = "Y" ] || [ "$ans" = "y" ]; then
+            if [ "$ans" = "Y" ] || [ "$ans" = "y" ] || [ "$ans" = "" ]; then
                 rm -f "$link"
             else
                 return

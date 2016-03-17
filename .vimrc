@@ -8,28 +8,26 @@ set nowrap
 
 "{{{ Appearance
 set t_Co=256
-"colo Laravel
-"let g:solarized_termcolors=256
 syntax enable
-colorscheme solarized
+"colorscheme solarized
 set background=dark
-"if has("gui_running")
-    "if has("gui_gtk2")
-        "set guifont=Terminus\ 14
-    "else
-        "set guifont="-*-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1"
-    "endif
-    "set guioptions-=T
-"else
-"endif
+if has("gui_running")
+    if has("gui_gtk2")
+        set guifont=Terminus\ 14
+    else
+        set guifont="-*-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1"
+    endif
+    set guioptions-=T
+    set background=light
+endif
 
-"if has('gui')
-    "if has('win32')
-        "au GUIEnter * call libcallnr('maximize', 'Maximize', 1)
-    "elseif has('gui_gtk2')
-        "au GUIEnter * :set lines=99999 columns=99999
-    "endif
-"endif
+if has('gui')
+    if has('win32')
+        au GUIEnter * call libcallnr('maximize', 'Maximize', 1)
+    elseif has('gui_gtk2')
+        au GUIEnter * :set lines=99999 columns=99999
+    endif
+endif
 "set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P
 "}}}
 
