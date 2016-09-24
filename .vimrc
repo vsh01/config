@@ -1,10 +1,14 @@
 "Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
 call plug#end()
 
+
+set background=dark
+set t_Co=256
 
 set nocompatible
 set backspace=indent,eol,start
@@ -43,7 +47,8 @@ set nomodeline
 "airline
 " Need fonts from https://github.com/powerline/fonts, comment if fonts not
 " used  
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = "dark"
 
 set noshowmode
