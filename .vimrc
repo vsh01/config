@@ -43,7 +43,7 @@ set nomodeline
 "airline
 " Need fonts from https://github.com/powerline/fonts, comment if fonts not
 " used  
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 set noshowmode
