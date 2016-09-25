@@ -1,8 +1,12 @@
 "Plugins
+"Plug - https://github.com/junegunn/vim-plug
+"Command to download:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 call plug#end()
 
@@ -42,6 +46,7 @@ set nobackup
 set hlsearch
 set laststatus=2
 set nomodeline
+set showcmd
 
 
 "airline
@@ -52,3 +57,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = "dark"
 
 set noshowmode
+
+"syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
