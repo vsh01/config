@@ -12,7 +12,7 @@ alias la='ls -a'
 alias lsa='ls -ld .*'
 
 alias cal='ncal -b'
-
+alias sshr='ssh-keygen -R'
 
 alias df='df -h'
 alias du='du -h'

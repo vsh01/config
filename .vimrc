@@ -7,6 +7,12 @@ Plug 'scrooloose/syntastic'
 call plug#end()
 
 
+if has('gui_running')
+    set gfn=Roboto\ Mono\ Light\ for\ Powerline\ Semi-Light\ 14
+    colo industry
+endif
+
+
 set background=dark
 set t_Co=256
 
@@ -24,7 +30,7 @@ set smartcase
 set number
 set relativenumber
 "Display unprintable symbols
-set listchars=tab:▸·,space:·,eol:¬,precedes:«,extends:»
+set listchars=tab:▸·,trail:·,eol:¬,precedes:«,extends:»
 set list
 "Indents
 set tabstop=4
@@ -42,6 +48,7 @@ set nobackup
 set hlsearch
 set laststatus=2
 set nomodeline
+set showcmd
 
 
 "airline
