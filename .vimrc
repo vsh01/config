@@ -1,3 +1,5 @@
+" Никогда не юзай set nobackup  (я это написал после того как удалил час
+" работы)
 "Plugins
 "Plug - https://github.com/junegunn/vim-plug
 "Command to download:
@@ -48,7 +50,6 @@ imap <F1> <ESC><ESC>:NERDTreeToggle<CR>
 
 "Other
 set wildmenu
-set nobackup
 set hlsearch
 set laststatus=2
 set nomodeline
@@ -57,7 +58,7 @@ set showcmd
 
 "airline
 " Need fonts from https://github.com/powerline/fonts, comment if fonts not
-" used  
+" used
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = "dark"
@@ -69,3 +70,4 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = '/usr/bin/python3'
