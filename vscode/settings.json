@@ -1,0 +1,26 @@
+// Поместите параметры в этот файл, чтобы перезаписать параметры по умолчанию.
+{
+    "terminal.integrated.fontFamily": "Anonymous Pro for Powerline",
+    "terminal.integrated.fontSize": 17,
+    "editor.fontFamily": "Anonymous Pro",
+    "editor.fontSize": 18,
+    "editor.renderWhitespace": "boundary",
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": true,
+    "editor.rulers": [
+        120
+    ],
+
+    "[cpp]": {
+        "editor.quickSuggestions": false
+    },
+    "[c]": {
+        "editor.quickSuggestions": false
+    },
+
+    "python.linting.mypyEnabled": true,
+    "python.pythonPath": "/usr/bin/python3.5",
+    "python.linting.pylintArgs": [
+        "--disable=C0111,C0103"
+    ]
+}
