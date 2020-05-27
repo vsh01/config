@@ -51,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mercurial docker wd python zsh-autosuggestions debian)
+plugins=(wd python zsh-autosuggestions debian)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,8 +60,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=ru_RU.UTF-8
-export LC_ALL=ru_RU.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -149,4 +149,6 @@ export GOPATH=$HOME/dev/go
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 
-cd ~
+export PGHOST=127.0.0.1
+export PGUSER=postgres
+export PGPASSWORD=12345678
